@@ -8,7 +8,7 @@ use App\Models\Livro;
 class LivrosController extends Controller
 {
     public function index(){
-    	$livros = Livro::all();
+    	$livros = Livro::paginate(4);
 
     	return view ('livros.index', [
     		'livros'=>$livros

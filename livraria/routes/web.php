@@ -13,5 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\LivrosController@index')
+Route::get('/livros', 'App\Http\Controllers\LivrosController@index')
 ->name('livros.index');
+
+Route::get('/editoras', 'App\Http\Controllers\EditorasController@index')
+->name('editoras.index');
+
+Route::get('/generos', 'App\Http\Controllers\GenerosController@index')
+->name('generos.index');
+
+Route::get('/autores', 'App\Http\Controllers\AutoresController@index')
+->name('autoress.index');
