@@ -23,4 +23,18 @@ Route::get('/generos', 'App\Http\Controllers\GenerosController@index')
 ->name('generos.index');
 
 Route::get('/autores', 'App\Http\Controllers\AutoresController@index')
-->name('autoress.index');
+->name('autores.index');
+
+
+
+Route::get('/livros/{id}/show', 'App\Http\Controllers\LivrosController@show')
+->name('livros.show');
+
+Route::get('/editoras/{id}/show', 'App\Http\Controllers\LivrosController@show')
+->name('editoras.show');
+
+Route::get('/generos/{id}/show', 'App\Http\Controllers\LivrosController@show')
+->name('generos.show');
+
+Route::get('/autores/{id}/show', 'App\Http\Controllers\LivrosController@show')
+->name('autores.show');

@@ -14,4 +14,15 @@ class GenerosController extends Controller
     		'generos'=>$generos
     	]);
     }
+
+    public function show (Request $request){
+//opção 2
+    	$idGenero=$request->id;
+
+    	$genero=Genero::find($idGenero);
+
+    	return view('generos.show', [
+    			'genero'=>$genero
+    	]);
+    }
 }
